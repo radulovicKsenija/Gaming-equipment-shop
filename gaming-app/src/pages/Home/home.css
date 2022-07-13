@@ -1,0 +1,119 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f2f2f2;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+    margin: 0 auto;
+}
+
+nav img {
+    width: 127px;
+    height: 135px;
+}
+
+.navigation-menu a {
+    margin-right: 40px;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 600;
+    color: #4082b4;
+}
+
+.navigation-menu a:hover{
+    border-bottom: 4px solid #9e0382;
+    color: #9e0382;
+    transition: 0.2s ease;
+}
+.login{
+    cursor: pointer;
+}
+.login:hover{
+    color: #4687b8;
+    transition: 0.2s ease;
+}
+/*Footer*/
+footer{
+    background-color: #4082b4;
+    padding: 50px;
+}
+
+footer span{
+    color: white;
+    font-size: 18px;
+    padding-left: 7px;
+}
+
+.information div{
+    margin-bottom: 10px;
+}
+.more-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.more-info img{
+    width: 170px;
+    height: 170px;
+}
+.ecommerce{
+    display: flex;
+    align-items: center;
+}
+.ecommerce h2{
+    color: white;
+    font-size: 45px;
+}
+.webshop p{
+    color: white;
+    font-size: 18px;
+    margin-bottom: 0.7rem;
+}
+.cards{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+.cards span img{
+    width: 40px;
+    height: 35px;
+}
+.color-white{
+    color: white;
+}
+.delivery{
+    display: flex;
+    width: 75%;
+    margin: 0 auto 2rem;
+}
+.delivery span{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.delivery-span{
+    margin-right: 3rem;
+}
+.fa-truck, .fa-cart-arrow-down, .fa-mobile-screen, .fa-shield, .fa-headphones, .fa-hand-holding-heart{
+    height: 4em;
+    margin-bottom: 1rem;
+}
+.text{
+    text-align: center;
+}
+
+.more-info{
+    width: 90%;
+    margin: 0 auto;
+}
