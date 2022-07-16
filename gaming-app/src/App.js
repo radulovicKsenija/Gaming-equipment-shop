@@ -30,24 +30,51 @@ function App() {
                         <img src="/images/Home/logo.png" alt="logo"/>
                     </Link>
                 </div>
-                {!isLogged ? (
+                <div className={"navigation-menu"}>
                     <div>
-                        <div className={"login-account"}>
-                            <Link to={"/login"} style={{textDecoration: "none"}}>
-                                <span style={{paddingRight: 15, fontSize: 20}}>Login</span>
-                                <FontAwesomeIcon
-                                    icon={"user-tie"}
-                                    className={"login"}
-                                    size={"lg"}
-                                />
-                            </Link>
-                        </div>
+                        <Link to={"/"}>
+                            Home
+                        </Link>
                     </div>
-                ) : (
-                    <span style={{cursor: "pointer", fontSize: 20}}
-                          // onClick={() => logout()}
-                    >Logout</span>
-                )}
+                    <div>
+                        <Link to={"/products"}>
+                            Products
+                        </Link>
+                    </div>
+                    <div>
+                        <Link to={"/categories"}>
+                            Categories
+                        </Link>
+                    </div>
+                    <div>
+                        <Link to={"/cart"}>
+                            Cart
+                        </Link>
+                    </div>
+                    <div>
+                        <Link to={"/about-us"}>
+                            About us
+                        </Link>
+                    </div>
+                    {!isLogged ? (
+                        <div>
+                            <div className={"login-account"}>
+                                <Link to={"/login"} style={{textDecoration: "none"}}>
+                                    <span style={{paddingRight: 15, fontSize: 20}}>Login</span>
+                                    <FontAwesomeIcon
+                                        icon={"user-tie"}
+                                        className={"login"}
+                                        size={"lg"}
+                                    />
+                                </Link>
+                            </div>
+                        </div>
+                    ) : (
+                        <span style={{cursor: "pointer", fontSize: 20}}
+                            // onClick={() => logout()}
+                        >Logout</span>
+                    )}
+                </div>
             </nav>
             <Routes>
                 <Route path={"/"} element={<Home/>}/>
