@@ -1,4 +1,7 @@
+import React, {useEffect, useState} from 'react';
 import {BrowserRouter, Link, NavLink, Route, Routes, useNavigate} from "react-router-dom";
+import Home from "./pages/Home/Home";
+import Login from "./pages/Login/Login";
 import './pages/Home/home.css';
 
 /*FontAwesome*/
@@ -14,8 +17,7 @@ import {faXmark} from '@fortawesome/free-solid-svg-icons'
 import {faUserTie} from '@fortawesome/free-solid-svg-icons'
 import {faHeadphones} from '@fortawesome/free-solid-svg-icons'
 import {faHandHoldingHeart} from '@fortawesome/free-solid-svg-icons'
-import {useState} from "react";
-import Home from "./pages/Home/Home";
+import Register from "./pages/Register/Register";
 library.add(faArrowRight, faBars, faXmark, faUserTie, faTruck,faCartArrowDown,faMobileScreen, faShield,faHeadphones,faHandHoldingHeart);
 /*FontAwesome*/
 
@@ -56,28 +58,17 @@ function App() {
                             About us
                         </Link>
                     </div>
-                    {!isLogged ? (
-                        <div>
-                            <div className={"login-account"}>
-                                <Link to={"/login"} style={{textDecoration: "none"}}>
-                                    <span style={{paddingRight: 15, fontSize: 20}}>Login</span>
-                                    <FontAwesomeIcon
-                                        icon={"user-tie"}
-                                        className={"login"}
-                                        size={"lg"}
-                                    />
-                                </Link>
-                            </div>
-                        </div>
-                    ) : (
-                        <span style={{cursor: "pointer", fontSize: 20}}
-                            // onClick={() => logout()}
-                        >Logout</span>
-                    )}
+                    <div>
+                        <Link to={"/login"}>
+                            Login
+                        </Link>
+                    </div>
                 </div>
             </nav>
             <Routes>
                 <Route path={"/"} element={<Home/>}/>
+                <Route path={"/login"} element={<Login/>}/>
+                <Route path={"/registration"} element={<Register/>}/>
                 <Route
                     path="*"
                     element={

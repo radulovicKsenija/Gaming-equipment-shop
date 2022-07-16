@@ -1,0 +1,49 @@
+.login-container, .register-container{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    margin: 50px auto;
+}
+.login-form, .register-form{
+    border: 1px solid #4082b4;
+    padding: 70px 70px;
+    border-radius: 15px;
+}
+form{
+    text-align: center;
+}
+.login-container h2, .register-container h2{
+    text-align: center;
+}
+.login-container form, .register-container form{
+    margin-top: 30px;
+}
+.login-button, .register-button{
+    text-align: center;
+}
+
+.registration-container{
+    margin-top: 30px;
+}
+.registration-button{
+    background-color: transparent;
+    border: 1px solid #00508d;
+    color: #00508d;
+}
+.registration-button:hover{
+    color: white;
+    background-color: #022b48;
+}
+
+/*Style for Dialog*/
+.MuiPaper-root{
+    height: 20%;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.MuiPaper-root h2{
+    font-size: 30px;
+}

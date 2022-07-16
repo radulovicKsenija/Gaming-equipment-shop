@@ -1,0 +1,23 @@
+label{
+    margin-bottom: 20px;
+    text-align: left;
+}
+input{
+    margin: 15px 0 7px 0;
+    padding: 15px 20px;
+    border-radius: 10px;
+    border: 1px solid #4082b4;
+    outline: none;
+}
+span{
+    font-size: 14px;
+}
+input::placeholder{
+    font-size: 13px;
+}
+.error{
+    color: red;
+}
+.error-border{
+    border: 1px solid red;
+}
