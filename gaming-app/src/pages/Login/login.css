@@ -3,9 +3,10 @@
     display: flex;
     justify-content: center;
     margin: 50px auto;
+    color: white;
 }
 .login-form, .register-form{
-    border: 1px solid #4082b4;
+    border: 1px solid #c00000;
     padding: 70px 70px;
     border-radius: 15px;
 }

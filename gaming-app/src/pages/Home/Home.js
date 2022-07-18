@@ -14,7 +14,17 @@ import igrice from '../../images/Igrice.webp';
 import p1 from '../../images/razer.jpg';
 import p2 from '../../images/reddragon.jpg';
 import p3 from '../../images/msi.jpg';
-
+import mis from '../../images/GamingMis.webp';
+import tastatura from '../../images/GamingTastatura.webp';
+import slusalice from '../../images/GamingSlusalice.webp';
+import mikrofon from '../../images/GamingMikrofon.webp';
+import podloge from '../../images/GamingPodloge.webp';
+import webcam from '../../images/GamingWebcam.webp';
+import gamepad from '../../images/Gamepad.webp';
+import zvucnici from '../../images/GamingZvucnici.webp';
+import torbe from '../../images/GamingBackpack.webp';
+import smartwatch from '../../images/GamingSmartwatch.webp';
+import smartphone from '../../images/GamingSmartphone.webp';
 
 function Item(props)
 {
@@ -57,6 +67,64 @@ function Home(props) {
         {
             src: p3
         }
+    ]
+
+    var periferije = [
+        {
+            src: mis,
+            description: "Gaming Mis",
+            href: "#"
+        },
+        {
+            src: tastatura,
+            description: "Gaming Tastature",
+            href: "#"
+        },
+        {
+            src: slusalice,
+            description: "Gaming Slusalice",
+            href: "#"
+        },
+        {
+            src: mikrofon,
+            description: "Gaming Mikrofoni",
+            href: "#"
+        },
+        {
+            src: podloge,
+            description: "Gaming Podloge",
+            href: "#"
+        },
+        {
+            src: webcam,
+            description: "Gaming Webcam",
+            href: "#"
+        },
+        {
+            src: gamepad,
+            description: "Gamepad",
+            href: "#"
+        },
+        {
+            src: zvucnici,
+            description: "Gaming Zvucnici",
+            href: "#"
+        },
+        {
+            src: torbe,
+            description: "Gaming Torbe",
+            href: "#"
+        },
+        {
+            src: smartwatch,
+            description: "Gaming Smartwatch",
+            href: "#"
+        },
+        {
+            src: smartphone,
+            description: "Gaming Smartphone",
+            href: "#"
+        },
     ]
 
     var kategorije = [
@@ -108,6 +176,14 @@ function Home(props) {
                     {kategorije.map((kateg, i) => <a key={i} href={kateg.href}>
                         <img src={kateg.src}/>
                         <h3>{kateg.description}</h3>
+                    </a>)}
+                </div>
+
+                <h1>GAMING PERIFERIJE</h1>
+                <div className='kategorije'>
+                    {periferije.map((per, i) => <a key={i} href={per.href}>
+                        <img src={per.src}/>
+                        <h3>{per.description}</h3>
                     </a>)}
                 </div>
             </div>
