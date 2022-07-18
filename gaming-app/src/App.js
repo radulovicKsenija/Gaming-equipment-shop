@@ -29,7 +29,10 @@ function App() {
             <nav>
                 <div>
                     <Link to={"/"}>
-                        <img src="/images/Home/logo.png" alt="logo"/>
+                        <div className='logo-div'>
+                            <img src="/images/Home/logo.png" alt="logo"/>
+                            <h1>Gaming Web Shop</h1>
+                        </div>
                     </Link>
                 </div>
                 <div className={"navigation-menu"}>
