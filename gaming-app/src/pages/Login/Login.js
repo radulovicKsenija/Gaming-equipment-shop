@@ -54,15 +54,11 @@ function Login(props) {
         e.preventDefault();
         try {
             if(usernameCheck && passwordCheck){
-                const {data} = await axiosInstance.post("/token", {username, password});
-                // if(data.isSuccess){
-                //     localStorage.setItem("USER_ITEM", data.idToken);
-                //     localStorage.setItem("USER_ROLE", data.role);
-                //     window.location.href = '/'
-                // } else{
-                //     window.alert("Nepostojeći podaci!")
-                // }
-                console.log(data)
+                const {data} = await axiosInstance.post("/token/", {username, password});
+                if(data){
+                    localStorage.setItem("USER_ITEM", data.access);
+                    window.location.href = '/'
+                }
             }
         } catch (e) {
             console.log(e)

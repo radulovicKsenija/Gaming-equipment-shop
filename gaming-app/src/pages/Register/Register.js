@@ -107,22 +107,17 @@ function Register(props) {
         e.preventDefault();
         try {
             if (nameCheck && surnameCheck && usernameCheck && emailCheck && passwordCheck) {
-                const {data} = await axiosInstance.post("/register", {username:username, email: email, password:password,first_name:name, last_name: surname});
-                // if (data.isSuccess) {
-                //     window.alert("Uspjesna registracija!")
-                //     navigate("/login");
-                // }else if(data.msg === "Email already exists"){
+                const {data} = await axiosInstance.post("/register/", {username:username, email: email, password:password,first_name:name, last_name: surname});
+                if (data.message === "User Created Successfully.") {
+                    window.alert("Uspjesna registracija!")
+                    navigate("/login");
+                }
+                // else if(data.message === "Email already exists"){
                 //     window.alert("E-mail vec postoji!")
                 //     setName_surname("");
                 //     setEmail("");
                 //     setPassword("");
                 // }
-                // else {
-                //     setName_surname("");
-                //     setEmail("");
-                //     setPassword("");
-                // }
-                console.log(data)
             }
         } catch (e) {
             console.log(e)
