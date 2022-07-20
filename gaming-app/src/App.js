@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {BrowserRouter, Link, NavLink, Route, Routes, useNavigate} from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Login from "./pages/Login/Login";
+import Products from "./pages/Products/Products"
 import './pages/Home/home.css';
 
 /*FontAwesome*/
@@ -72,6 +73,7 @@ function App() {
                 <Route path={"/"} element={<Home/>}/>
                 <Route path={"/login"} element={<Login/>}/>
                 <Route path={"/registration"} element={<Register/>}/>
+                <Route path={"/products"} element={<Products/>}/>
                 <Route
                     path="*"
                     element={
