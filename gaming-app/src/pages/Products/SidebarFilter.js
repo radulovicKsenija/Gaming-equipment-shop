@@ -6,12 +6,12 @@ import { proizvodi } from "../../proizvodi";
 //filtriranje po kategorijama : racunari, laptopovi, monitori, tastature, misevi, stolice, podloge, slusalice, zvucnici, mikrofoni, kamere, torbe, satovi, telefoni, gamepad, konzole, igrice
 //filtriranje po proizvodjacima
 
-const SidebarFilter = () => {
+const SidebarFilter = (props) => {
 
     let products = proizvodi;
+    //remove duplicates
     let uniqueCategories = [...new Set(products.map(product => product.kategorija))]
     let uniqueProviders = [...new Set(products.map(product => product.proizvodjac))]
-    console.log(uniqueCategories);
 
     return (
         <div className="sidebar-container">
@@ -26,6 +26,8 @@ const SidebarFilter = () => {
                         key={i}
                         id={i}
                         name={cat}
+                        checked={props.checked}
+                        onChange={props.handleChange}
                     />)}
                 </div>
             </div>
@@ -39,6 +41,8 @@ const SidebarFilter = () => {
                         key={i}
                         id={i}
                         name={prov}
+                        checked={props.checked}
+                        onChange={props.handleChange}
                     />)}
                 </div>
             </div>
