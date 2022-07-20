@@ -1,10 +1,11 @@
 import React from "react";
 import "./Checkbox.css"
 
-const Checkbox = () => {
+const Checkbox = (props) => {
     return (
-        <div>
-            checkbox
+        <div className="cb-container">
+            <input className="checkbox-input" type="checkbox" id={props.id} value={props.name} />
+            <label for={props.id}>{props.name}</label>
         </div>
     )
 }

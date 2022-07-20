@@ -44,7 +44,7 @@ export const proizvodi = [
         opis: "Acer Nitro QG241Y Gaming Monitor, Full HD, 75 Hz, 23.8inch, 1ms, ZeroFrame, FreeSync, VGA / HDMI*2",
         cijena: "158.40",
         proizvodjac: "Acer",
-        kategorija: "monitor"
+        kategorija: "Monitori"
     },
     {
         src: monitor2,
@@ -53,7 +53,7 @@ export const proizvodi = [
         opis: "BenQ 27inch GL2780E LED crni monitor",
         cijena: "193.00",
         proizvodjac: "BENQ",
-        kategorija: "monitor"
+        kategorija: "Monitori"
     },
     {
         src: monitor3,
@@ -62,7 +62,7 @@ export const proizvodi = [
         opis: "SAMSUNG Gaming Monitor CRG5 Curved 27inch Full HD, 240Hz, 4ms, 3000:1, DP / HDMI*2",
         cijena: "298.10",
         proizvodjac: "Samsung",
-        kategorija: "monitor"
+        kategorija: "Monitori"
     },
     {
         src: monitor4,
@@ -71,7 +71,7 @@ export const proizvodi = [
         opis: "Lenovo G25-20 24.5inch / TN 1920x1080 / 165Hz / 1ms / HDMI,DP / AMD FreeSync / crna",
         cijena: "299.50",
         proizvodjac: "Lenovo",
-        kategorija: "monitor"
+        kategorija: "Monitori"
     },
     {
         src: monitor5,
@@ -80,7 +80,7 @@ export const proizvodi = [
         opis: "Gigabyte 27inch M27F-EK FHD Gaming Monitor Rezolucija: 1.920 x 1.080 Tip ekrana: TFT LCD Tip panela: IPS Pozadinsko osvetljenje: Edge-LED",
         cijena: "306.10",
         proizvodjac: "Gigabyte",
-        kategorija: "monitor"
+        kategorija: "Monitori"
     },
     {
         src: monitor6,
@@ -89,7 +89,7 @@ export const proizvodi = [
         opis: "Dell 31.5inch S3222DGM 165Hz QHD FreeSync Gaming zakrivljeni monitor",
         cijena: "452.50",
         proizvodjac: "Dell",
-        kategorija: "monitor"
+        kategorija: "Monitori"
     },
     {
         src: tastatura1,
@@ -98,7 +98,7 @@ export const proizvodi = [
         opis: "Kingston HX-KB6RDX-US HyperX Origins Mechanical Gaming tastatura",
         cijena: "123.80",
         proizvodjac: "Kingston",
-        kategorija: "tastatura"
+        kategorija: "Tastature"
     },
     {
         src: tastatura2,
@@ -107,7 +107,7 @@ export const proizvodi = [
         opis: "Kingston HX-KB1SS2-US HyperX Alloy FPS RGB Mechanical Gaming tastatura",
         cijena: "122.50",
         proizvodjac: "Kingston",
-        kategorija: "tastatura"
+        kategorija: "Tastature"
     },
     {
         src: racunar1,
@@ -116,7 +116,7 @@ export const proizvodi = [
         opis: "MC BASE GAMER PRO 5.6X - AMD RYZEN 5 5600X 3.70 GHz (4.60 GHz) / ASUS STRIX B550-F GAMING Ploca / ASUS ROG-STRIX-RX6600XT-O8G-GAMING",
         cijena: "1499.00",
         proizvodjac: "MC Base",
-        kategorija: "racunar"
+        kategorija: "Racunari"
     },
     {
         src: racunar2,
@@ -125,7 +125,7 @@ export const proizvodi = [
         opis: "MC Base TUF PRO Gamer R9.5950X V1 - AMD Ryzen9 5950X 16-cores / 32-threads 3.40 GHz (4.90 GHz) / ASUS ROG RYUJIN 360 CPU Kuler / TUF GAMING X570-PLUS ",
         cijena: "3999.00",
         proizvodjac: "MC Base",
-        kategorija: "racunar"
+        kategorija: "Racunari"
     }
 ]
 
