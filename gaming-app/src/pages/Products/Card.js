@@ -8,14 +8,14 @@ const Card = (props) => {
         <div className="card-container">
             <img src={props.src} alt="product-img"/>
             <h3>{props.name}</h3>
-            <p>{props.opis}</p>
+            <p>{props.description}</p>
             <div className="shop-this-item">
                 <div className="icons">
                     <UilInfo size="40" color="#000000" cursor="pointer" />
                     <UilShoppingCartAlt size="25" color="#000000" cursor="pointer"/>
                 </div>
                 <div className="price">
-                    <h3>{props.cijena + "€"}</h3>
+                    <h3>{props.price + "€"}</h3>
                 </div>
             </div>
             

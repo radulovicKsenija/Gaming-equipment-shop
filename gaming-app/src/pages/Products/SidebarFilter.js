@@ -10,8 +10,8 @@ const SidebarFilter = (props) => {
 
     let products = proizvodi;
     //remove duplicates
-    let uniqueCategories = [...new Set(products.map(product => product.kategorija))]
-    let uniqueProviders = [...new Set(products.map(product => product.proizvodjac))]
+    let uniqueCategories = [...new Set(products.map(product => product.category))]
+    let uniqueProviders = [...new Set(products.map(product => product.provider))]
 
     return (
         <div className="sidebar-container">
@@ -26,8 +26,7 @@ const SidebarFilter = (props) => {
                         key={i}
                         id={i}
                         name={cat}
-                        checked={props.checked}
-                        onChange={props.handleChange}
+                        onSelect={props.onSelect}
                     />)}
                 </div>
             </div>
@@ -41,8 +40,7 @@ const SidebarFilter = (props) => {
                         key={i}
                         id={i}
                         name={prov}
-                        checked={props.checked}
-                        onChange={props.handleChange}
+                        onSelect={props.onSelect}
                     />)}
                 </div>
             </div>
