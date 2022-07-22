@@ -31,13 +31,10 @@ const Products = () => {
     }
 
     useEffect(() => {
-        // Uzmi odabrane kategorije
-        // Uzmi sve proizvode
-        // Kreiraj varijablu za filterovane proizvode
-        // Prelazi proizvod po proizvod i ubaci u filterovane ako kategorija match-uje neku odabranu
-        // vrati fitlerovane 
 
-        // Da li je odabrana ijedna kategorija
+        let productsToShow = {};
+
+        //Da li je odabrana ijedna kategorija
         let showAllProducts = true
         for (let category in filters) {
             if (filters[category] === true) { showAllProducts = false }
@@ -45,26 +42,25 @@ const Products = () => {
         // Ako nije, prikazi sve proizvode
         if (showAllProducts) {
             setFilteredProducts(proizvodi)
+        //filtriranje proizvoda
         } else {
-            // //svi filterovani proizvodi 
-            var allFilteredProducts = [];
-            // Filteruj proizvode
-           
+            //niz gdje ce se pushovati odabrane kategorije
+            let chosenCategories = []; // ["Monitori", "Tastature", ...]
             for (let category in filters) {
                 if (filters[category] === true) {
-                    filteredProducts.forEach((product) => {
-                        if (product.category === category) {
-                            allFilteredProducts.push(product);
-                        }
-                    })
-                    console.log(allFilteredProducts);
-                    setFilteredProducts(allFilteredProducts);
+                    chosenCategories.push(category);
                 }
             }
+            //ako je kategorija proizvoda u odabranim kategorijama, prikazi taj proizvod
+            productsToShow = proizvodi.filter(product => chosenCategories.includes(product.category));
+            // console.log(productsToShow);
+            setFilteredProducts(productsToShow);
         }
+
+        
     }, [filters]);
 
-console.log(filteredProducts)
+// console.log(filteredProducts)
     return (
         <div className="products-main-container">
             <SidebarFilter 
