@@ -8,10 +8,16 @@
 }
 
 .display-products {
-    height: 100%;
+    min-height: 100%;
     width: 100%;
     background-color:white;
     padding: 20px;
     display: grid;
+    align-content: space-between;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.searchbar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }

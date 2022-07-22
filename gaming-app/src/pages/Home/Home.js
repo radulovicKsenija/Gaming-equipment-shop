@@ -18,7 +18,7 @@ function Item(props)
     )
 }
 
-function Home(props) {
+function Home() {
 
     const itemss = items;
     const promotionss = promotions;

@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import "./Products.css";
 import SidebarFilter from "./SidebarFilter";
 import Card from "./Card";
+import SearchBar from "../../components/SearchBar/SearchBar";
 import {proizvodi} from "../../proizvodi";
 
 
@@ -61,25 +62,53 @@ const Products = () => {
         }
     }, [filters]);
 
+    useEffect(() => {
+        //filtrirati proizvode na search
+
+        //niz gdje ce se ubaciti proizvodi koji sadrze zeljenu rijec
+        let searchFilteredProducts = {};
+
+        //prikazi sve proizvode ako je search prazan
+        if(searchValue === "") {
+            setFilteredProducts(proizvodi);
+        } else {
+            //filtriraj proizvode koji sadrze ukucanu rijec
+            searchFilteredProducts = proizvodi.filter(proizvod => proizvod.name.includes(searchValue.toLocaleUpperCase()));
+            // console.log(searchFilteredProducts);
+            setFilteredProducts(searchFilteredProducts);
+        }
+    }, [searchValue]);
+
+    // za sada su proizvodi filtrirani po cijeni, od manje prema vecoj, ali treba dodati neki sort feature gdje se proizvodi mogu sortirati proizvoljno
+    filteredProducts.sort((a,b) => parseInt(a.price) > parseInt(b.price) ? 1 : parseInt(a.price) < parseInt(b.price) ? -1 : 0);
+
     return (
-        <div className="products-main-container">
-            <SidebarFilter 
-                onSelect={handleFilteredProducts}
-            />
-            <div className="display-products">
-                
-                {filteredProducts.map(proizvod => 
-                    <Card 
-                        key={proizvod.id} 
-                        src={proizvod.src} 
-                        name={proizvod.name} 
-                        description={proizvod.description} 
-                        price={proizvod.price} 
-                    />
-                )}
-                
+        <div>
+            <div className="searchbar">
+                <SearchBar 
+                    value={searchValue}
+                    onChange={(e) => setSearchValue(e.target.value)}
+                />
+            </div>
+            <div className="products-main-container">
+                <SidebarFilter 
+                    onSelect={handleFilteredProducts}
+                />
+                <div className="display-products">
+                    {filteredProducts.map(proizvod => 
+                        <Card 
+                            key={proizvod.id} 
+                            src={proizvod.src} 
+                            name={proizvod.name} 
+                            description={proizvod.description} 
+                            price={proizvod.price} 
+                        />
+                    )}
+                    
+                </div>
             </div>
         </div>
+        
     )
 }
 
