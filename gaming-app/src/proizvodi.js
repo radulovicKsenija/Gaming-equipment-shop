@@ -34,6 +34,7 @@ import zvucnici from './images/GamingZvucnici.webp';
 import torbe from './images/GamingBackpack.webp';
 import smartwatch from './images/GamingSmartwatch.webp';
 import smartphone from './images/GamingSmartphone.webp';
+import slusalice1 from "./images/slusalice1.webp";
 
 export const proizvodi = [
     {
@@ -125,6 +126,15 @@ export const proizvodi = [
         price: "3999.00",
         provider: "MC Base",
         category: "Racunari"
+    },
+    {
+        src: slusalice1,
+        name: "RAZER BLACKSHARK V2 PRO RAINBOW SIX EDITION",
+        id: 94949,
+        description: "Razer BlackShark V2 Pro Rainbow Six Edition, Razer HyperSpeed Wireless, Triforce Titanium 50mm zvucnici",
+        price: "198.90",
+        provider: "Razer",
+        category: "Slusalice"
     }
 ]
 

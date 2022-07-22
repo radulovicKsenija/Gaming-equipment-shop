@@ -12,13 +12,13 @@ const Products = () => {
     // console.log(filteredProducts);
 
     let uniqueCategories = [...new Set(filteredProducts.map(product => product.category))]
-    // console.log(uniqueCategories);
-    // let uniqueProviders = [...new Set(filteredProducts.map(product => product.proizvodjac))]
+    let uniqueProviders = [...new Set(filteredProducts.map(product => product.provider))]
 
     useEffect(() => {
-        let selectedCategories = {};
-        uniqueCategories.forEach(category => selectedCategories[category] = false);
-        setFilters(selectedCategories)
+        let selectedFilters = {};
+        uniqueCategories.forEach(category => selectedFilters[category] = false);
+        uniqueProviders.forEach(provider => selectedFilters[provider] = false);
+        setFilters(selectedFilters);
     }, []);
 
     const handleFilteredProducts = (name) => { 
@@ -35,9 +35,10 @@ const Products = () => {
         let productsToShow = {};
 
         //Da li je odabrana ijedna kategorija
+        //ovo radi i za proizvodjace
         let showAllProducts = true
-        for (let category in filters) {
-            if (filters[category] === true) { showAllProducts = false }
+        for (let filter in filters) {
+            if (filters[filter] === true) { showAllProducts = false }
         }
         // Ako nije, prikazi sve proizvode
         if (showAllProducts) {
@@ -45,22 +46,20 @@ const Products = () => {
         //filtriranje proizvoda
         } else {
             //niz gdje ce se pushovati odabrane kategorije
-            let chosenCategories = []; // ["Monitori", "Tastature", ...]
-            for (let category in filters) {
-                if (filters[category] === true) {
-                    chosenCategories.push(category);
+            let chosenFilters = []; // ["Monitori", "Tastature", ...]
+            for (let filter in filters) {
+                if (filters[filter] === true) {
+                    chosenFilters.push(filter);
                 }
             }
-            //ako je kategorija proizvoda u odabranim kategorijama, prikazi taj proizvod
-            productsToShow = proizvodi.filter(product => chosenCategories.includes(product.category));
+            console.log("CHOSEN FILTERSS ----", chosenFilters);
+            //ako je kategorija ili proizvodjac proizvoda u odabranim filterima, prikazi taj proizvod
+            productsToShow = proizvodi.filter(product => chosenFilters.includes(product.category) || chosenFilters.includes(product.provider));
             // console.log(productsToShow);
             setFilteredProducts(productsToShow);
         }
-
-        
     }, [filters]);
 
-// console.log(filteredProducts)
     return (
         <div className="products-main-container">
             <SidebarFilter 
@@ -76,6 +75,7 @@ const Products = () => {
                         price={proizvod.price} 
                     />
                 )}
+                
             </div>
         </div>
     )
