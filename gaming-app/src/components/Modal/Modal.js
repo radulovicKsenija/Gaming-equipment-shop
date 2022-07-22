@@ -9,12 +9,17 @@ const Modal = (props) => {
             <div className="modal-container">
                 <div className="modal-title">
                     <h3>{props.name}</h3>
-                    <button onClick={props.onClick}>X</button>
+                    <button className="exit-btn" onClick={props.onClick}>X</button>
                 </div>
 
                 <div className="modal-img">
                     <img src={props.src} />
                 </div>
+                
+                <div className="product-description">
+                    <p>{props.description}</p>
+                </div>
+                
             </div>
         </div>
     )

@@ -10,12 +10,12 @@ const Card = (props) => {
     return (
         <>
             <div className="card-container">
-                <img src={props.src} alt="product-img" onClick={() => setOpenModal(true)}/>
+                <img src={props.src} alt="product-img" onClick={() => setOpenModal(true)} />
                 <h3>{props.name}</h3>
                 <p>{props.description}</p>
                 <div className="shop-this-item">
                     <div className="icons">
-                        <UilInfo size="40" color="#000000" cursor="pointer" />
+                        <UilInfo size="40" color="#000000" cursor="pointer" onClick={() => setOpenModal(true)}/>
                         <UilShoppingCartAlt size="25" color="#000000" cursor="pointer"/>
                     </div>
                     <div className="price">
@@ -28,7 +28,7 @@ const Card = (props) => {
                     onClick={() => setOpenModal(false)}
                     name={props.name}
                     src={props.src}
-                    price={props.price}
+                    description={props.description}
                 />
             }
         </>

@@ -9,6 +9,7 @@ const Products = () => {
     //za sada podatke uzimamo iz ovog js fajla dok ne dobijemo bazu iz backenda
     const [filteredProducts, setFilteredProducts] = useState(proizvodi);
     const [filters, setFilters] = useState({});
+    const [searchValue, setSearchValue] = useState("");
     // console.log(filteredProducts);
 
     let uniqueCategories = [...new Set(filteredProducts.map(product => product.category))]
@@ -66,6 +67,7 @@ const Products = () => {
                 onSelect={handleFilteredProducts}
             />
             <div className="display-products">
+                
                 {filteredProducts.map(proizvod => 
                     <Card 
                         key={proizvod.id} 
